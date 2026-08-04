@@ -4,8 +4,6 @@ import csv
 import time
 from email.message import EmailMessage # 1. Import the library
 GMAIL_ADDRESS = "mondaysamaila32@gmail.com"
-# 3. Retrieve the credentials securely
-# The names inside the quotes MUST match exactly what you typed in the .env file
 sender_email = GMAIL_ADDRESS
 print("Connecting to email server...")
 
@@ -36,5 +34,3 @@ with smtplib.SMTP("localhost", 1025) as server:
                     print(f"Error sending email: {e}")
                     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     print(f"Error occurred at {current_time}")
-        
-    # ... rest of your email loop continues here ...
